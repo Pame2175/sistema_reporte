@@ -1,0 +1,416 @@
+@import url(../fonts/GothamBook.css);
+@import url(../fonts/GothamBold.css);
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background: #ededed;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'arial';
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+h1{
+	font-size: 20px;
+	text-align: center;
+}
+h2{
+	font-size: 20px;
+}
+h3{
+	font-size: 18px;
+}
+h4{
+	font-size: 16px;
+	padding: ;
+	text-align: center;
+
+}
+h5{
+	font-size: 14px;
+}
+h6{
+	font-size: 12px;
+}
+p{
+	font-family: 'Times New Roman';
+	letter-spacing: 2px;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: justify;
+}
+a{
+	text-decoration: none;
+	font-family: Times New Roman;
+	letter-spacing: 1px;
+}
+span {
+    font-family: 'GothamBook';
+    letter-spacing: 1px;
+    font-size: 14px;
+    line-height: 20px;
+}
+header{
+	/*position: fixed;*/
+	width: 100%;
+	background-color: ;
+}
+.button {
+    background-color: #428bca;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display:inline-flex;
+    font-size: 16px;
+    margin:auto;
+    position: relative;
+    margin-bottom: 20px;
+    
+}
+.button2 {
+    background-color: #428bca;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display:inline-flex;
+    font-size: 16px;
+    margin:auto;
+    position: relative;
+    margin-bottom: 20px;
+    
+}
+.alinear{
+	text-align: justify;
+}
+.btnMenu{
+	color: #FFF;
+	font-size: 20pt;
+	margin-right: 20px;
+	display: none;
+}
+.viewMenu
+{
+	left: 0;
+	transition: 0.5s all;
+
+}
+.header{
+	color: black;
+	background:#BBECE8;
+	height: 35px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+}
+.optionsBar{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.optionsBar span {
+    color: black;
+    font-size: 11pt;
+    font-family: 'GothamBook';
+    text-transform: uppercase;
+    margin-left: 30px;
+}
+.photouser {
+    margin-left: 30px;
+    width: 25px;
+    height: 25px;
+}
+.photoinicio{
+    margin-left: 20px;
+    width: 400px;
+    height: 150px;
+    display:block;
+    margin:auto;
+    margin-bottom: 20px;
+}
+.close{
+	width: 25px;
+    height: 25px;
+}
+.optionsBar a {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    margin-left: 30px;
+}
+.panel-body{
+	
+	text-align:center;
+    position: absolute;
+    top: 50%;
+  	left: 50%;
+  	margin: -25px 0 0 -25px;
+
+
+}
+nav ul{
+	background: #0c9d4c;
+	/*background: #05817d;*/
+	list-style: none;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+nav ul > li a{
+	position: relative;
+}
+nav a{
+	color: #FFF;
+	display: block;
+	font-size: 10pt;
+	/*font-family: 'GothamBook';*/
+	padding: 10px 5px;
+	/*text-transform: uppercase;,colorar minusculas*/
+	letter-spacing: 2px;
+	transition: background .5s;
+	border-right: 1px solid #319B8F;
+	width: 150px;
+	text-decoration: none;
+}
+nav .principal > a{
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-size: auto auto;
+    background-position: 94% center;
+    background-size: 10px;
+}
+nav ul li:hover ul{
+	display: block;
+}
+nav li ul{
+	/*background: #177470;*/
+	background: #ccc;;
+	display: none;
+	flex-direction: column;
+	position: absolute;
+	align-items: flex-start;
+	border-radius: 0 0 10px 10px;
+}
+nav li ul a{
+	position: relative;
+	padding: 10px 30px;
+	border-right: initial;
+}
+nav li ul a:hover{
+	/*background: #2c9595;*/
+	background: #147556;
+}
+nav li ul li:last-child{
+	border-radius: 0 0 10px 10px;
+	overflow: hidden;
+}
+#container{
+	padding: 90px 15px 15px;
+}
+/*****************************************************************/
+
+.form_register{
+	width: 450px;
+	margin: auto;
+}
+.form_register h1{
+	color: #3c93b0;
+}
+hr{
+	border: 0;
+	background: #CCC;
+	height: 1px;
+	margin: 10px 0;
+	display: block;
+}
+form{
+	background: white;
+	margin: auto;
+	padding: 20px 50px;
+	border-radius: 20px;
+	border: 5px solid white;
+}
+label{
+	display: block;
+	font-size: 12pt;
+	font-family: 'GothamBook';
+	margin: 15px auto 5px auto;
+}
+input,select{
+	display: block;
+	width: 100%;
+	font-size: 11pt;
+	padding: 5px;
+	border: 1px solid #85929e;
+	border-radius: 5px;
+}
+.notItemOne option:first-child{
+	display: none;
+}
+.btn_save{
+	font-size: 12pt;
+	background: #12a4c6;
+	padding: 10px;
+	color: #FFF;
+	letter-spacing: 1px;
+	border: 0;
+	cursor: pointer;
+	margin: 15px auto;
+}
+.alert{
+	width: 100%;
+	background: green;
+	border-radius: 6px;
+	margin: 20px auto;
+	color: black;
+}
+.msg_error{
+	color: #e65656;
+}
+.msg_save{
+	color: #126e00;
+}
+.alert p{
+	padding: 10px;
+}
+
+/*=============== LISTA USUARIO =============*/
+#container h1{
+	font-size: 35px;
+	display: inline-block;
+}
+.btn_new{
+	display: inline-block;
+	background: #239baa;
+	color: #FFF;
+	padding: 5px 25px;
+	border-radius: 4px;
+	margin: 20px;
+}
+table{
+	border-collapse: collapse;
+	font-size: 12pt;
+	font-family: 'arial';
+	width: 100%;
+}
+table th{
+	text-align: left;
+	padding: 10px;
+	background: #ccc;
+}
+table tr:nth-child(odd){
+	background: #FFF;
+}
+table td{
+	padding: 10px;
+}
+.link_edit{
+	color: #0ca4ce;
+}
+.link_delete{
+	color: #f26b6b;
+}
+.data_delete{
+	text-align: center;
+}
+.data_delete h2{
+	font-size: 12pt;
+}
+.data_delete span{
+	font-weight: bold;
+	color: #4f72d4;
+	font-size: 12pt;
+}
+.btn_cancel,.btn_ok{
+	width: 124px;
+	background: #478ba2;
+	color: #FFF;
+	display: inline-block;
+	padding: 5px;
+	border-radius: 5px;
+	cursor: pointer;
+	margin: 15px;
+}
+.btn_cancel{
+	background: #42b343;
+}
+
+.data_delete form{
+
+	background: initial;
+	margin: auto;
+	padding: 20px 50px;
+	border: 0;
+
+}
+/*============ Paginador =============*/
+.paginador ul{
+	padding: 15px;
+	list-style: none;
+	background: #FFF;
+	margin-top: 15px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: flex-end;
+}
+.paginador a, .pageSelected{
+	color: #428bca;
+	border: 1px solid #ddd;
+	padding: 3px;
+	display: inline-block;
+	font-size: 14px;
+	text-align: center;
+	width: 35px;
+}
+.paginador a:hover{
+	background: #ddd;
+}
+.pageSelected{
+	color: #FFF;
+	background: #237c1e	;
+	border: 1px solid #428bca;
+}
+/*============ Buscador ============*/
+.form_search{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	float: right;
+	background: initial;
+	padding: 10px;
+	border-radius: 10px;
+}
+.form_search .btn_search{
+	background: #1faac8;
+	color: #FFF;
+	padding: 0 20px;
+	border: 0;
+	cursor: pointer;
+	margin-left: 10px;
+}
