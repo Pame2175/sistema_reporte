@@ -126,22 +126,29 @@
 			<?php
    
     if($fetch['nombre'] == "Pendiente"){?>
-    <td style="background:red
+    <td style="background:orange
     ;" class=""><?php echo $fetch["nombre"];?></td>
     <?php  
     }
      ?>
      <?php
    
-    if($fetch['nombre'] == "En proceso"){?>
-    <td style="background:yellow;" class=""><?php echo $fetch["nombre"];?></td>
+    if($fetch['nombre'] == "Aprobado"){?>
+    <td style="background:green;" class=""><?php echo $fetch["nombre"];?></td>
     <?php  
     }
      ?>
      <?php
    
+    if($fetch['nombre'] == "Rechazado"){?>
+    <td style="background: red" class=""><?php echo $fetch["nombre"];?></td>
+    <?php  
+    }
+     ?>
+      <?php
+   
     if($fetch['nombre'] == "Finalizado"){?>
-    <td style="background: green" class=""><?php echo $fetch["nombre"];?></td>
+    <td style="background:blue;" class=""><?php echo $fetch["nombre"];?></td>
     <?php  
     }
      ?>
@@ -150,7 +157,7 @@
 		<?php
    
     if(!empty($fetch['observacion'])){?>
-    <td class="columna" style="background: green"><?php echo $fetch["observacion"];?></td>
+    <td class="columna" style="background: yellow"><?php echo $fetch["observacion"];?></td>
     <?php  
     }
      ?>

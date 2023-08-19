@@ -31,6 +31,7 @@
   <script src="files/bower_components/jquery/dist/jquery.min.js"></script>
   <script src="files/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="files/plugins/sweetalert2/sweetalert2.all.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
   </head>
   <body onload="getLocation();">
@@ -52,17 +53,28 @@
 }
 
   </style>
+ <style type="text/css">
+        .multimediaFisica{
+        
+          overflow-x: scroll;
 
+        }
+       </style>
     <?php include "includes_usuario/header.php";?>
   <b>
   <div class="input-group multimediaVirtual" style="display:none">
   </div>
   <div class="multimediaFisica">
   <form class="formulario_denuncia" style="overflow-x: scroll;">
+     <div>
+      <p class="instrucciones">Por favor, completa el formulario con los detalles del incidente de maltrato animal y luego adjunta una foto relacionada. Una vez que hayas completado el formulario, selecciona una foto y haz clic en el botón "Adjuntar Foto" y posteriormente en "Enviar" para reportar el caso.</p>
+    </div>
   <center>
   <h1 style = "font-family:arial,arial,helvética;">Formulario de reporte</h1> 
   </center>
-  <form>
+  
+  <form >
+   
  <div class="alerta">
     "Advertencia: La denuncia falsa es un delito y puede resultar en acciones legales, de acuerdo a la ley de protección animal en Paraguay."
   </div>
@@ -238,3 +250,29 @@
         border: #ccc;
       }
     </style>
+<style type="text/css">
+  .formulario_denuncia {
+    padding: 5% 2%; /* Ajusta el padding según tus preferencias */
+    border-radius: 2px;
+    overflow-x: scroll;
+  }
+  
+  .guardar_denuncia {
+    float: right;
+    margin-top: 20px;
+  }
+.instrucciones {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  @media screen and (max-width: 768px) {
+    .formulario_denuncia {
+      padding: 5% 5%; /* Ajusta el padding según tus preferencias */
+      width: 90%; /* Ajusta el ancho del formulario */
+      margin: 0 auto; /* Centra el formulario en la pantalla */
+    }
+  }
+
+</style>
+

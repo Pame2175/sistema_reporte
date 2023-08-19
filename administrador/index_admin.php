@@ -35,6 +35,82 @@
     </style>
     </head>
     <body>
+     
+
+  <title>Gráficos de tabla</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1 class="about__title">Tipo de maltrato animal más común</h1>
+  <canvas id="chart" width="400" height="400"></canvas>
+
+  <?php
+  include "../conexion.php";
+
+  // Obtener datos de la tabla de MySQL
+ $sql = "SELECT
+            r.lista_denuncia_id,
+            r.descripcion,
+            tm.id_tipo_maltrato,
+            tm.nombres,
+            COUNT(*) as cantidad,
+            COUNT(*) / (SELECT COUNT(*) FROM lista_denuncia) * 100 as porcentaje
+        FROM lista_denuncia r
+        INNER JOIN estados re ON r.id_estado = re.id_estado
+        INNER JOIN tipo_maltrato tm ON r.id_tipo_maltrato = tm.id_tipo_maltrato
+        GROUP BY id_tipo_maltrato";
+
+$result = $conection->query($sql);
+
+
+  $labels = array();
+  $data = array();
+  $colors = array(); // Array para almacenar colores diferentes
+
+  if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+      $labels[] = $row["nombres"];
+      $data[] = $row["porcentaje"];
+      // Generar un color aleatorio en formato RGB
+      $colors[] = 'rgb(' . rand(0, 255) . ', ' . rand(0, 255) . ', ' . rand(0, 255) . ')';
+    }
+  }
+  ?>
+
+  <script>
+    // Get the data from PHP and use it to create the chart
+    var ctx = document.getElementById('chart').getContext('2d');
+    var chart = new Chart(ctx, {
+      type: 'pie', // Usamos un gráfico de tipo pastel
+      data: {
+        labels: <?php echo json_encode($labels); ?>,
+        datasets: [{
+          label: 'Porcentaje',
+          data: <?php echo json_encode($data);?> ,
+          backgroundColor: <?php echo json_encode($colors); ?>, // Asignamos los colores aleatorios
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: false, // Desactivamos la responsividad para mantener el tamaño fijo
+        tooltips: {
+          callbacks: {
+            label: function (tooltipItem, data) {
+              var dataset = data.datasets[tooltipItem.datasetIndex];
+              var total = dataset.data.reduce(function (previousValue, currentValue, currentIndex, array) {
+                return previousValue + currentValue;
+              });
+              var currentValue = dataset.data[tooltipItem.index];
+              var percentage = Math.floor(((currentValue / total) * 100) + 0.5);
+              return data.labels[tooltipItem.index] + ':' + percentage + '%';
+            }
+          }
+        }
+      }
+    });
+  </script>
+
+
       
    <br>
     <div class="tablero">

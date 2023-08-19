@@ -100,25 +100,32 @@
     <td class="columna"><?php echo $fetch["celular"];?></td>
    <td style="width: 200px; height: 100px;">
         <iframe  src='https://www.google.com/maps?q=<?php echo $fetch["latitud"];?>,<?php echo $fetch["longitud"];?>&hl=es;z=14&output=embed' style=" width=100% ; height= 100%;"></iframe></td>
-    <?php
+   <?php
    
     if($fetch['nombre'] == "Pendiente"){?>
-    <td style="background:red
+    <td style="background:orange
     ;" class=""><?php echo $fetch["nombre"];?></td>
     <?php  
     }
      ?>
      <?php
    
-    if($fetch['nombre'] == "En proceso"){?>
-    <td style="background:yellow;" class=""><?php echo $fetch["nombre"];?></td>
+    if($fetch['nombre'] == "Aprobado"){?>
+    <td style="background:green;" class=""><?php echo $fetch["nombre"];?></td>
     <?php  
     }
      ?>
      <?php
    
+    if($fetch['nombre'] == "Rechazado"){?>
+    <td style="background: red" class=""><?php echo $fetch["nombre"];?></td>
+    <?php  
+    }
+     ?>
+      <?php
+   
     if($fetch['nombre'] == "Finalizado"){?>
-    <td style="background: green" class=""><?php echo $fetch["nombre"];?></td>
+    <td style="background:blue;" class=""><?php echo $fetch["nombre"];?></td>
     <?php  
     }
      ?>
