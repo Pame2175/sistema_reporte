@@ -77,7 +77,7 @@
       <th>Apellido denunciante</th>
       <th>Celular</th>
       <th>Tipo maltrato</th>	
-			
+			 <th>Descripción</th>  
       <th>Ubicación</th>
 			<th>Estado</th>
       <th>Fecha</th>
@@ -119,8 +119,9 @@
       <td><?php echo $fetch["nombre_usu"];?></td>
       <td><?php echo $fetch["apellido"];?></td>
       <td><?php echo $fetch["celular"];?></td>
+
 			<td><?php echo $fetch["nombres"];?></td>
-			
+			  <td><?php echo $fetch["descripcion"];?></td>
 			<td style="width: 200px; height: 100px;">
         <iframe  src='https://www.google.com/maps?q=<?php echo $fetch["latitud"];?>,<?php echo $fetch["longitud"];?>&hl=es;z=14&output=embed' style=" width=100% ; height= 100%;"></iframe></td>
 			<?php
@@ -331,8 +332,8 @@ $("#mostrar_geo").modal("show");
     datos=$(this).closest("tr");
     lista_denuncia_id=datos.find('td:eq(0)').text();
     nombre_estado=datos.find('td:eq(4)').text();
-    id_estado=datos.find('td:eq(8)').text();
-    observacion=datos.find('td:eq(10)').text();
+    id_estado=datos.find('td:eq(9)').text();
+    observacion=datos.find('td:eq(11)').text();
       
       $("#lista_denuncia_id").val(lista_denuncia_id);
       $("#nombre_estado").val(nombre_estado);
