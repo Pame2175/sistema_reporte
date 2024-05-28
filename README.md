@@ -47,7 +47,7 @@ SMA2023 es un sistema diseñado para facilitar la denuncia y seguimiento de caso
 1. **Clona el repositorio:**
 
     ```sh
-    git clone https://github.com/tu_usuario/SMA2023.git
+    https://github.com/Pame2175/sistema_reporte.git
     cd SMA2023
     ```
 
