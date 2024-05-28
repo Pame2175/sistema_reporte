@@ -94,6 +94,3 @@ SMA2023 es un sistema diseñado para facilitar la denuncia y seguimiento de caso
 
 Para cualquier pregunta o sugerencia, puedes contactarme a través de pamegonza.98.pg@gmail.com.
 
----
-
-![Logo del Proyecto](URL_DEL_LOGO)
