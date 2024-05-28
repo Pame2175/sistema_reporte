@@ -1,10 +1,11 @@
 # Sistema de Reporte de Maltrato Animal (SMA2023)
 
-![PHP Logo](https://www.php.net/images/logos/php-logo.svg)
-![JavaScript Logo](https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png)
-![Bootstrap Logo](https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo-shadow.png)
-![CSS Logo](https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg)
-
+<p align="center">
+  <img src="https://www.php.net/images/logos/php-logo.svg" alt="PHP Logo" width="100"/>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript Logo" width="80"/>
+  <img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo-shadow.png" alt="Bootstrap Logo" width="80"/>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS Logo" width="80"/>
+</p>
 ## Descripción
 
 SMA2023 es un sistema diseñado para facilitar la denuncia y seguimiento de casos de maltrato animal. Utilizando tecnologías como PHP, JavaScript, Bootstrap y CSS, este sistema permite a los usuarios reportar incidentes de manera independiente y a los administradores gestionar y visualizar los reportes a través de un mapa interactivo y gráficos estadísticos.
